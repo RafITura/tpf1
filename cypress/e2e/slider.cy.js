@@ -16,3 +16,15 @@ describe('Swiper Gallery Test', function () {
     cy.get('.swiper-slide-active').should('contain', 'Paris');
   });
 });
+describe("Swiper Gallery Test", function () {
+  it("Checks if slider is working correctly", function () {
+    cy.visit("http://localhost:3000");
+    cy.get(".swiper-button-next").click();
+    cy.wait(2000);
+    cy.get('.swiper-slide-active').should('contain', 'United Kingdom');
+    cy.get(".swiper-button-prev").click();
+    cy.wait(2000);
+    cy.get('.swiper-slide-active').should('contain', 'Italy');
+    });
+    });
+
